@@ -1,0 +1,25 @@
+﻿@page
+@model dz_asp_01.Pages.RestaurantsModel
+@{
+    <div class="container mt-3">
+        <div class="row">
+            @foreach (var restaurant in Model.Restaurants)
+            {
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">@restaurant.Name</h5>
+                            <p class="card-text">
+                                <strong>Адреса:</strong> @restaurant.Address <br />
+                                <strong>Кухня:</strong> @restaurant.Cuisine
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">9 mins ago</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+}

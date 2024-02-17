@@ -1,0 +1,27 @@
+﻿@page
+@model dz_asp_01.Pages.CountriesModel
+
+
+<h2 class="mb-3">Країни</h2>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>Назва</th>
+                <th>Столиця</th>
+                <th>Населення</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var country in Model.CountryList)
+            {
+                <tr>
+                    <td>@country.Name</td>
+                    <td>@country.Capital</td>
+                    <td>@country.Population.ToString("N0")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,16 @@
+[
+  {
+    "TypeDiscriminator": 2,
+    "TypeValue": {
+      "Name": "Buddy",
+      "Age": 5
+    }
+  },
+  {
+    "TypeDiscriminator": 1,
+    "TypeValue": {
+      "Name": "Whiskers",
+      "Age": 3
+    }
+  }
+]

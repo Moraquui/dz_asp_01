@@ -1,0 +1,35 @@
+﻿@page
+@model Asp.Net_HW_Module_02_ч1.Pages.AnimalModel
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Animal Serializers</title>
+</head>
+<body>
+    <h2>Test Animal Serialization and Deserialization</h2>
+
+    <form method="post">
+        <div>
+            <label for="format">Choose a format:</label>
+            <select id="format" name="Format">
+                <option value=".json">JSON</option>
+                <option value=".xml">XML</option>
+            </select>
+        </div>
+
+        <div>
+            <input type="submit" name="action" value="SaveAnimals" />
+            <input type="submit" name="action" value="LoadAnimals" />
+        </div>
+    </form>
+    <h3>Animals List</h3>
+    <ul>
+        @foreach (var animal in Model.animals)
+        {
+            <li>@animal.Name - @animal.Age years old</li>
+        }
+    </ul>
+   
+</body>
+</html>
